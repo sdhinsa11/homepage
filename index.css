@@ -5,7 +5,6 @@ body{
 
 .header{
     padding: .5rem;
-    border: 1px solid black;
 }
 
 .stylewrapper{
@@ -31,7 +30,6 @@ body{
     top: 70%;
     left: 10%;
     font-size:  50px;
-
 }
 
 .main{
@@ -55,15 +53,43 @@ img{
 .title{
     font-size: 50px;
     text-align: center;
-    margin: 0;
-    padding:0;
-}
-
-.aboutMe{
-    border: 1px solid black;
+    font-weight: bold;
+    margin: 1rem 0;
 }
 
 .aboutmeP{
     line-height: 1.5;
     font-size: 30px;
+    padding: 0;
+    margin: 0.5rem 0;
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.links p:nth-child(2n+1){
+    margin: 1rem;
+}
+
+
+@media (min-width: 600px){
+    .stylewrapper{
+        transform: skewY(-14deg);
+        
+
+    }
+
+}
+
+@media (min-width: 950px){
+    .stylewrapper{
+        transform: skewY(-9deg);
+        
+
+    }
+
 }
