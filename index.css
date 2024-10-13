@@ -83,6 +83,21 @@ body{
     margin: 1rem;
 }
 
+.cards {
+    display: flex;
+    flex-direction: column; /* Single column by default */
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    border: 1px solid black;
+    margin: 1rem;
+    padding: 1em;
+    width: 300px; /* 3 cards per row */
+    height: 250px; /* Set a fixed height */
+}
+
 
 @media (min-width: 768px){
     .header{
@@ -124,6 +139,11 @@ body{
         margin-right: 2em;
     }
 
+    .cards {
+        flex-direction: row; /* Switch to row layout */
+        flex-wrap: wrap; /* Allow wrapping */
+    }
+
     
 
 }
@@ -161,7 +181,8 @@ body{
         top: 0px;
         right: -50px;
 
-    }
+    } 
+
     
 
 
