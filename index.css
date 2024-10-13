@@ -4,7 +4,7 @@ body{
 }
 
 .header{
-    padding: .5rem;
+    padding: 0.5rem;
 }
 
 .stylewrapper{
@@ -13,10 +13,11 @@ body{
     width: 100%;
     position: absolute;
     z-index: -1;
-    top: 0;
+    top:0;
     left: 0;
-    transform: skewY(-15deg);
+    transform: skewY(-15deg); /* Initial skew and no translation */
     transform-origin: 0;
+    transition: transform 0.2s ease; /* Smooth flow */
 }
 
 /* Fix this style */
@@ -41,13 +42,13 @@ body{
 }
 
 .img{
+    background-image: url("img/picOne.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
     width: 300px;
+    height: 400px;
     position: relative;
-}
-
-img{
-    width: 100%;
-    height: auto;
 }
 
 .title{
@@ -64,6 +65,13 @@ img{
     margin: 0.5rem 0;
 }
 
+.aboutMe{
+    background-color: white;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
 .links{
     display: flex;
     justify-content: center;
@@ -76,20 +84,88 @@ img{
 }
 
 
-@media (min-width: 600px){
+@media (min-width: 768px){
+    .header{
+        margin-top:2rem;
+    }
     .stylewrapper{
-        transform: skewY(-14deg);
-        
+        transform: skewY(-10deg);
+    }
+
+    .main { 
+        display: block;
+        width: 50%;
+        margin: 0 auto; 
+    }
+    .img {
+        float: left;
+        margin-right: 10px;
+        position: relative;
+        z-index: 3;
+        width: 30vw;
+        max-height: 490px;
+        top: -20px;
+        right: 50px;
 
     }
+
+    .title{
+        font-size: 30px;
+        margin-top: 3rem;
+    }
+
+    .aboutMe{
+        padding: 4rem;
+        margin-top: 2em;
+        /* padding-top: 4em; */
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-size: 1rem;;
+        margin-right: 2em;
+    }
+
+    
 
 }
 
 @media (min-width: 950px){
     .stylewrapper{
-        transform: skewY(-9deg);
+        transform: skewY(-5deg);
+    }
+
+    .main {
+        display: flex; 
+        flex-direction: row;
+        align-items: flex-start; 
+        width: 80%; 
+        margin: 0 auto;
+    }
+    .aboutMe {
+        padding-right: 1em;
+        font-size: 20px;
+        height: 290px;
         
+    }
+
+    .aboutmeP{
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .img {
+        margin-right: 10px;
+        position: relative;
+        z-index: 3;
+        width: 50vw;
+        height: 560px;
+        top: 0px;
+        right: -50px;
 
     }
+    
+
+
+
+
 
 }
